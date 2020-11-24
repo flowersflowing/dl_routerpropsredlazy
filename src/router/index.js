@@ -1,11 +1,11 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Inicio from '../components/Inicio';
-import SobreMi from '../components/SobreMi';
-import Contacto from '../components/Contacto';
-import Articulo from '../components/Articulo';
-import NotFound from '../components/NotFound';
-import Administrador from '../components/Administrador';
+// import SobreMi from '../components/SobreMi';
+// import Contacto from '../components/Contacto';
+// import Articulo from '../components/Articulo';
+// import NotFound from '../components/NotFound';
+// import Administrador from '../components/Administrador';
 
 Vue.use(Router)
 export default new Router({
@@ -31,12 +31,14 @@ export default new Router({
         {
             path: '/sobremi',
             name: 'SobreMi',
-            component: () => import('../components/SobreMi.vue')
+            component: () => import('../components/SobreMi.vue'),
+            alias: '/acerca'
         },
         {
             path: '/contacto',
             name: 'Contacto',
-            component: () => import('../components/Contacto.vue')
+            component: () => import('../components/Contacto.vue'),
+            alias: '/contactame'
         },
         {
             path: '/post/:id',
