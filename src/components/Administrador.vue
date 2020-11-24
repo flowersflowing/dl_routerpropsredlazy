@@ -9,7 +9,7 @@ export default {
     props: ["administrador"],
     computed: {
         titulo() {
-            return ``;
+            return `Bienvenido a la página de Administración`;
         }
     }  
 }

@@ -34,6 +34,13 @@ export default new Router({
             path: '*',
             name: 'NotFound',
             component: () => import('../components/NotFound.vue')
+        },
+        {
+            path: '/administrador/:administrador',
+            component: Administrador,
+            props: (route) => ({
+                cliente: `Bienvenido a la página de ${route.params.administrador}`
+            })
         }
     ]
 })
