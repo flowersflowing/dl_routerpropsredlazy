@@ -17,6 +17,18 @@ export default new Router({
             component: Inicio
         },
         {
+            path: '/home',
+            redirect: '/'
+        },
+        {
+            path: '/inicio',
+            redirect: '/'
+        },
+        {
+            path: '/portada',
+            redirect: '/'
+        },
+        {
             path: '/sobremi',
             name: 'SobreMi',
             component: () => import('../components/SobreMi.vue')
