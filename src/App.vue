@@ -53,10 +53,21 @@ export default {
 #menu-v8 a{
   text-shadow: 1px 1px #000;
 }
-.transicion-vistas-enter {
+/* .transicion-vistas-enter {
   opacity: 0%;
 }
 .transicion-vistas-leave-to {
   opacity: 100%;
+} */
+.transicion-vistas-active {
+  animation: salida 0.1s;
+}
+@keyframes entrada {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 </style>
