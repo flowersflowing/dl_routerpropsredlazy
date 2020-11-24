@@ -5,6 +5,7 @@ import SobreMi from '../components/SobreMi';
 import Contacto from '../components/Contacto';
 import Articulo from '../components/Articulo';
 import NotFound from '../components/NotFound';
+import Administrador from '../components/Administrador';
 
 Vue.use(Router)
 export default new Router({
