@@ -6,6 +6,7 @@ import Inicio from '../components/Inicio';
 // import Articulo from '../components/Articulo';
 // import NotFound from '../components/NotFound';
 // import Administrador from '../components/Administrador';
+const LazyLoading = () => import('../components/LazyLoading');
 
 Vue.use(Router)
 export default new Router({
@@ -14,7 +15,15 @@ export default new Router({
         {
             path: '/',
             name: 'Inicio',
-            component: Inicio
+            component: Inicio,
+            children: [
+                {
+                    path: '',
+                    components: {
+                        lazyloading: LazyLoading
+                    }
+                }
+            ]
         },
         {
             path: '/home',
@@ -32,18 +41,42 @@ export default new Router({
             path: '/sobremi',
             name: 'SobreMi',
             component: () => import('../components/SobreMi.vue'),
-            alias: '/acerca'
+            alias: '/acerca',
+            children: [
+                {
+                    path: '',
+                    components: {
+                        lazyloading: LazyLoading
+                    }
+                }
+            ]
         },
         {
             path: '/contacto',
             name: 'Contacto',
             component: () => import('../components/Contacto.vue'),
-            alias: '/contactame'
+            alias: '/contactame',
+            children: [
+                {
+                    path: '',
+                    components: {
+                        lazyloading: LazyLoading
+                    }
+                }
+            ]
         },
         {
             path: '/post/:id',
             name: 'Post',
-            component: () => import('../components/Articulo.vue')
+            component: () => import('../components/Articulo.vue'),
+            children: [
+                {
+                    path: '',
+                    components: {
+                        lazyloading: LazyLoading
+                    }
+                }
+            ]
         },
         {
             path: '*',
